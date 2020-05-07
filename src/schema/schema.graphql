@@ -18,6 +18,7 @@ type Race {
     season: String!
     round: String!
     url: String!
+    urlMobile: String!
     name: String!
     circuit: Circuit!
     date: String!
@@ -27,6 +28,7 @@ type Race {
 type Circuit {
     id: String!
     url: String!
+    urlMobile: String!
     name: String!
     location: Location!
 }
