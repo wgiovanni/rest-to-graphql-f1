@@ -1,5 +1,5 @@
 import { F1 } from './data-source';
-import { checkYear } from '../lib/utils';
+import { checkYear,checkRound } from '../lib/utils';
 
 export class RacesData extends F1 {
     constructor() {
@@ -8,7 +8,15 @@ export class RacesData extends F1 {
 
     async getYear(year: string) {
         year = checkYear(year);
-        return await this.get(`${year}.json`, {
+        return await this.get(`${ year }.json`, {
+            cacheOptions: { ttl: 60}
+        });
+    }
+
+    async getYearRound(year: string, round: number) {
+        year = checkYear(year);
+        round = checkRound(round);
+        return await this.get(`${ year }/${ round }.json`, {
             cacheOptions: { ttl: 60}
         });
     }

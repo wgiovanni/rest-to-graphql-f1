@@ -10,7 +10,7 @@ export function checkYear(year: string) {
     return year; 
 }
 
-export function roundCheck(round: number) {
+export function checkRound(round: number) {
     if (round >= 100) {
         return 1
     }
