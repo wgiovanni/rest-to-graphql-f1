@@ -7,12 +7,11 @@ const query: IResolvers = {
                 (data: any) => data.MRData.SeasonTable.Seasons
             );
         },
-        async recesByYear(_:void, { year }, { dataSources }) {
+        async racesByYear(_:void, { year }, { dataSources }) {
             return await dataSources.races.getYear(year).then(
                 (data: any) => data.MRData.RaceTable.Races
             );
         } 
-        
     }
 };
 
