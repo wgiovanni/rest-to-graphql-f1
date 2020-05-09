@@ -16,6 +16,11 @@ const type: IResolvers = {
         name: parent => parent.circuitName,
         location: parent => parent.Location,
         urlMobile: parent => getWikipediaMobileUrl(parent.url)
+    },
+    Driver: {
+        id: parent => parent.driverId,
+        name: parent => parent.givenName.concat(' ').concat(parent.familyName),
+        urlMobile: parent => getWikipediaMobileUrl(parent.url)
     }
 };
 

@@ -2,6 +2,7 @@ type Query {
     seasonsList: [Season!]!
     racesByYear(year: String!): [Race!]!
     raceSelect(year: String!, round: Int!): Race
+    historyDrivers: [Driver!]!
 }
 
 type Mutation {
