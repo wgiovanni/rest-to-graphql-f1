@@ -32,6 +32,11 @@ const query: IResolvers = {
                 (data: any) => data.MRData.DriverTable.Drivers
             );
         },
+        async driverSelect(_:void, { id }, { dataSources }) {
+            return await dataSources.drivers.getDriver(id).then(
+                (data: any) => data.MRData.DriverTable.Drivers[0]
+            );
+        }
         
     }
 };
