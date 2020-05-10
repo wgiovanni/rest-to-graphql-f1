@@ -42,6 +42,11 @@ const query: IResolvers = {
                 (data: any) => data.MRData.StandingsTable.StandingsLists[0].DriverStandings
             );
         },
+        async historyCircuits(_:void, { pageElements, page }, { dataSources }) {
+            return await dataSources.circuits.getCirtuis(pageElements, page).then(
+                (data: any) => data.MRData.CircuitTable.Circuits
+            );
+        },
         
     }
 };
