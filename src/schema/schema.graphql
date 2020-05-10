@@ -29,8 +29,10 @@ type Query {
     driverSelect(id: String!): Driver
     "Clasificacion final de los pilotoa de un temporada"
     seasonsPilotsRanking(year: String!): [DriverStanding!]!
-    "Pilotos historicos"
+    "Circuitos historicos"
     historyCircuits(pageElements: Int, page: Int): [Circuit!]!
+    "Circuito seleccionado"
+    circuitSelect(id: String!): Circuit
 }
 
 type Mutation {

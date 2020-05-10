@@ -17,4 +17,10 @@ export class CircuitsData extends F1 {
             cacheOptions: { ttl: 60}
         });
     }
+
+    async getCircuit(id: string) {
+        return await this.get(`/circuits/${ id }.json`,{
+            cacheOptions: { ttl: 60}
+        });
+    }
 }
