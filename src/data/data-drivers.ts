@@ -42,4 +42,11 @@ export class DriversData extends F1 {
             cacheOptions: { ttl: 60}
         });
     }
+
+    async getSeasonsPilotsRanking(year: string) {
+        year = checkYear(year);
+        return await this.get(String(year).concat('/driverStandings.json'),{
+            cacheOptions: { ttl: 60}
+        });
+    }
 }

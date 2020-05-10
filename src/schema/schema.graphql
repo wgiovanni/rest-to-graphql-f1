@@ -28,7 +28,7 @@ type Query {
     "Obtenemos la informacion del piloto mediante el valor 'id'"
     driverSelect(id: String!): Driver
     "Clasificacion final de los pilotoa de un temporada"
-    seasonPilotsRanking(year: String!): [DriverStanding!]!
+    seasonsPilotsRanking(year: String!): [DriverStanding!]!
 }
 
 type Mutation {
